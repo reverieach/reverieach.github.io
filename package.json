@@ -36,5 +36,9 @@
     "@tailwindcss/typography": "^0.5.10",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1"
+  },
+  "optionalDependencies": {
+    "@emnapi/core": "1.11.1",
+    "@emnapi/runtime": "1.11.1"
   }
 }
