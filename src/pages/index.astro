@@ -1,29 +1,53 @@
 ---
-import SitePage from '../components/SitePage';
-import '../styles/global.css';
-
-const pageTitle = 'Bao Zixuan | Reverieach';
-const pageDescription =
-  'Personal homepage of Bao Zixuan, an AI student at Beijing University of Posts and Telecommunications, building AI tools, desktop utilities, and embedded systems.';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE_TITLE, url } from "../config";
 ---
 
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={pageDescription} />
-    <meta name="theme-color" content="#f8f8f0" />
-    <title>{pageTitle}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <SitePage page="home" client:load />
-  </body>
-</html>
+<BaseLayout sideBarActiveItemID="home">
+    <div class="pb-12 mt-5">
+        <img src={url('profile.jpg')} alt="Bao Zixuan" class="w-28 h-28 mb-5 rounded-full shadow-ac object-cover" />
+        <div class="text-xl py-1">Hi, I'm</div>
+        <div class="text-5xl font-bold">{SITE_TITLE}</div>
+        <div class="text-2xl py-2 font-bold">鲍子轩 · reverieach</div>
+        <div class="text-xl py-6 leading-relaxed">
+            北京邮电大学人工智能学院本科生。<br />
+            我关注能真正落地的 AI 工具、桌面自动化、计算机视觉、NLP 和嵌入式智能系统。
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-10">
+            <a href={url('projects')} class="btn-ac">View Projects</a>
+            <a href="https://github.com/reverieach" target="_blank" class="btn btn-outline rounded-ac-md">GitHub</a>
+            <a href="mailto:baozixuan@bupt.edu.cn" class="btn btn-outline rounded-ac-md">Email</a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+            <div class="rounded-ac-lg bg-base-100 p-6 shadow-ac border-t-4 border-ac-primary">
+                <div class="text-2xl font-bold mb-3">What I build</div>
+                <p class="text-lg leading-relaxed">
+                    作业提醒、游戏聊天翻译、RK3568 端侧 AI、课程实验和复习工具。项目通常从一个很具体的麻烦开始，然后做成可以每天使用的工具。
+                </p>
+            </div>
+            <div class="rounded-ac-lg bg-base-100 p-6 shadow-ac border-t-4 border-ac-green">
+                <div class="text-2xl font-bold mb-3">Site structure</div>
+                <p class="text-lg leading-relaxed">
+                    这个站点按模板保留 Projects、CV、Blog、Personal、Notes 几个入口。现在先放个人主页和项目，后续写文章只需要新增 Markdown 文件。
+                </p>
+            </div>
+            <div class="rounded-ac-lg bg-base-100 p-6 shadow-ac border-t-4 border-ac-orange">
+                <div class="text-2xl font-bold mb-3">Current focus</div>
+                <ul class="list-disc ml-5 leading-8">
+                    <li>AI-assisted productivity tools</li>
+                    <li>Computer vision and edge inference</li>
+                    <li>NLP systems and semantic matching</li>
+                    <li>Small desktop apps with careful UX</li>
+                </ul>
+            </div>
+            <div class="rounded-ac-lg bg-base-100 p-6 shadow-ac border-t-4 border-ac-pink">
+                <div class="text-2xl font-bold mb-3">Now</div>
+                <p class="text-lg leading-relaxed">
+                    先把站点变成清晰可扩展的信息架构，再慢慢补 note、blog 和照片。比一页塞满所有东西更耐用。
+                </p>
+            </div>
+        </div>
+    </div>
+</BaseLayout>

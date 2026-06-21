@@ -1,0 +1,69 @@
+---
+import { url } from "../config";
+---
+
+<div
+    class="block sticky pointer-events-none bottom-10 bg-ac-cream-dark justify-center h-12 [mask-image:linear-gradient(transparent,#000000)]"
+>
+</div>
+
+<!-- Theme toggle -->
+<div class="px-4 pb-2 sticky bottom-[52px] bg-ac-cream-dark">
+    <button
+        onclick="toggleTheme()"
+        class="flex items-center gap-2 px-3 py-1.5 w-full rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
+        aria-label="Toggle theme"
+        title="Toggle theme"
+    >
+        <img id="theme-icon" src={url('leaf_light.png')} alt="" class="w-5 h-5 rounded-ac-sm" />
+        <span id="theme-label">Dark Mode</span>
+    </button>
+</div>
+
+<div
+    class="social-icons px-4 pb-5 pt-1 flex flex-col items-start sticky bottom-0 bg-ac-cream-dark gap-1"
+>
+    <a
+        href="https://github.com/reverieach"
+        target="_blank"
+        class="flex items-center gap-2 px-3 py-1.5 rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
+        aria-label="GitHub"
+        title="GitHub"
+    >
+        <img src={url('news.png')} alt="GitHub" class="w-5 h-5 rounded-ac-sm" />
+        <span>GitHub</span>
+    </a>
+
+    <a
+        href="mailto:baozixuan@bupt.edu.cn"
+        target="_blank"
+        class="flex items-center gap-2 px-3 py-1.5 rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
+        aria-label="Email"
+        title="Email"
+    >
+        <img src={url('brewster.png')} alt="Email" class="w-5 h-5 rounded-ac-sm" />
+        <span>Email</span>
+    </a>
+
+    <a
+        href="https://www.bupt.edu.cn/"
+        target="_blank"
+        class="flex items-center gap-2 px-3 py-1.5 rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
+        aria-label="BUPT"
+        title="BUPT"
+    >
+        <img src={url('whatsapp.png')} alt="BUPT" class="w-5 h-5 rounded-ac-sm" />
+        <span>BUPT</span>
+    </a>
+
+    <a
+        href="https://reverieach.github.io/"
+        target="_blank"
+        class="flex items-center gap-2 px-3 py-1.5 rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
+        aria-label="Website"
+        title="Website"
+    >
+        <img src={url('instagram.png')} alt="Website" class="w-5 h-5 rounded-ac-sm" />
+        <span>Website</span>
+    </a>
+</div>

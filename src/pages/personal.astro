@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import { AUTHOR_INITIAL, url } from "src/config";
+---
+
+<BaseLayout
+    title={AUTHOR_INITIAL + " | Personal"}
+    sideBarActiveItemID="personal"
+>
+    <!-- TODO change color according to theme
+    <div class="w-[10rem] mt-5 mb-6">
+        <Image
+            class="fill-current rounded-ac-md"
+            format="webp"
+            width={300}
+            height={300}
+            src={url('profile.jpg')}
+            alt="Bao Zixuan"
+        />
+    </div> -->
+    <div class="w-[10rem] mt-5 mb-6">
+        <Image
+            class="fill-current rounded-ac-md"
+            format="webp"
+            width={300}
+            height={300}
+            src={url('favicon.svg')}
+            alt="icon"
+        />
+    </div>
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">About Me</div>
+    </div>
+
+    <div class="mb-10 text-justify">
+        我是鲍子轩，GitHub ID 是 reverieach，目前在北京邮电大学人工智能学院学习。
+        我喜欢把课程、日常工具和游戏场景里的真实需求做成可以运行的小系统：
+        例如自动提醒作业、给外服聊天做实时翻译、在嵌入式开发板上跑 AI 应用，
+        或者把深度学习课程实验整理成更清楚的工程项目。
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">This site</div>
+    </div>
+
+    <div class="mb-10 text-justify">
+        这里先作为个人主页和项目索引。Blog 会放比较完整的文章，Notes 会放短记录和片段，Projects 会持续同步更完整的项目介绍。
+        视觉和结构参考 ac-site-template，保留侧栏、内容集合和分页路线，方便以后继续扩展。
+    </div>
+
+    <!-- <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Education</div>
+    </div>
+
+    <div class="time-line-container grid gap-4 mb-10">
+        <TimeLineElement
+            title="Title Name"
+            subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+        />
+        <TimeLineElement
+            title="Title Name"
+            subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+        />
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Experience</div>
+    </div>
+
+    <div class="time-line-container mb-10">
+        <TimeLineElement
+            title="Job Title at Project or Company Name"
+            subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+        >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident.
+        </TimeLineElement>
+        <TimeLineElement
+            title="Job Title at Project or Company Name"
+            subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+        >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident.
+        </TimeLineElement>
+        <TimeLineElement
+            title="Job Title at Project or Company Name"
+            subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+        >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident.
+        </TimeLineElement>
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Certifications</div>
+    </div>
+
+    <ul class="list-disc mx-6 mb-10 grid gap-2">
+        <li>
+            <a href="#" target="_blank"> Certification Name (with link)</a>
+        </li>
+        <li>
+            <a href="#" target="_blank"> Certification Name (with link)</a>
+        </li>
+    </ul>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Skills</div>
+    </div>
+
+    <ul class="list-disc md:columns-5 columns-2 mx-6">
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+        <li>Skill Name</li>
+    </ul> -->
+</BaseLayout>
