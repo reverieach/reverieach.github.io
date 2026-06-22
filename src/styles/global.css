@@ -70,12 +70,15 @@ pre {
   border-radius: var(--ac-radius-md);
   box-shadow: 0 4px 0 var(--ac-primary-dark);
   transition: all 0.1s ease;
-  font-weight: 500;
-  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  min-height: 3rem;
+  padding: 0 1.45rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
 }
 
 .btn-ac:hover {
@@ -87,6 +90,37 @@ pre {
 .btn-ac:active {
   transform: translateY(3px);
   box-shadow: 0 1px 0 var(--ac-primary-dark);
+}
+
+.btn-ac-secondary {
+  position: relative;
+  background-color: var(--ac-surface);
+  color: var(--ac-text-dark);
+  border: 3px solid var(--ac-border);
+  border-radius: var(--ac-radius-md);
+  box-shadow: 0 4px 0 var(--ac-sand);
+  transition: all 0.1s ease;
+  font-weight: 700;
+  min-height: 3rem;
+  padding: 0 1.45rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.btn-ac-secondary:hover {
+  border-color: var(--ac-primary);
+  color: var(--ac-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 var(--ac-sand);
+}
+
+.btn-ac-secondary:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--ac-sand);
 }
 
 /* Rounded images in prose content (blog posts, notes) */
